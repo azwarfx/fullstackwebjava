@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="calonjamaah" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="70fdf307-2ee9-4440-af6c-10a4d4ea11ac">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CalonJamaah"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="CalonJamaah" uuid="fdc08021-7c10-49fc-9024-09757dea7a1f">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CalonJamaah"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="namaJamaah" class="java.lang.String">
+			<fieldDescription><![CDATA[namaJamaah]]></fieldDescription>
+		</field>
+		<field name="noTlp" class="java.lang.String">
+			<fieldDescription><![CDATA[noTlp]]></fieldDescription>
+		</field>
+		<field name="noPaspor" class="java.lang.String">
+			<fieldDescription><![CDATA[noPaspor]]></fieldDescription>
+		</field>
+		<field name="thnTerakhir" class="java.util.Date">
+			<fieldDescription><![CDATA[thnTerakhir]]></fieldDescription>
+		</field>
+		<field name="binti" class="java.lang.String">
+			<fieldDescription><![CDATA[binti]]></fieldDescription>
+		</field>
+		<field name="id" class="java.lang.Long">
+			<fieldDescription><![CDATA[id]]></fieldDescription>
+		</field>
+		<field name="alamat" class="java.lang.String">
+			<fieldDescription><![CDATA[alamat]]></fieldDescription>
+		</field>
+		<field name="pengalamanHaji" class="java.lang.String">
+			<fieldDescription><![CDATA[pengalamanHaji]]></fieldDescription>
+		</field>
+	</subDataset>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="namaJamaah" class="java.lang.String">
+		<fieldDescription><![CDATA[namaJamaah]]></fieldDescription>
+	</field>
+	<field name="noTlp" class="java.lang.String">
+		<fieldDescription><![CDATA[noTlp]]></fieldDescription>
+	</field>
+	<field name="noPaspor" class="java.lang.String">
+		<fieldDescription><![CDATA[noPaspor]]></fieldDescription>
+	</field>
+	<field name="thnTerakhir" class="java.util.Date">
+		<fieldDescription><![CDATA[thnTerakhir]]></fieldDescription>
+	</field>
+	<field name="binti" class="java.lang.String">
+		<fieldDescription><![CDATA[binti]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.Long">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[alamat]]></fieldDescription>
+	</field>
+	<field name="pengalamanHaji" class="java.lang.String">
+		<fieldDescription><![CDATA[pengalamanHaji]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="380">
+			<staticText>
+				<reportElement x="160" y="0" width="230" height="20" uuid="9161bd41-dcc6-4306-b23a-72ba65bdbd94"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PT. Al-Amsor Mubarokah Wisata]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="137" y="20" width="250" height="20" uuid="6efb122b-afaf-4427-965c-a08f3728b5a7"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Jl. Warung Buncit Raya No. 34 Jakarta Selatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="126" y="41" width="269" height="20" uuid="3a627369-a3a6-41de-8dae-c75b071bfd18"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Tlp. 021-7944825,7944814 Fax. 021-7944816]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-20" y="61" width="591" height="5" uuid="165b1430-2538-4aa2-b969-1d476ce798a7"/>
+			</line>
+			<staticText>
+				<reportElement x="130" y="66" width="270" height="20" uuid="914278c1-c15a-4bab-a430-6ddefd836426"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kloter Keberangkatan Jamaah Haji/Umroh]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement key="table" style="table" x="0" y="97" width="360" height="50" uuid="c8bc9dfb-6a1e-44c6-aa29-7c522d5bd300"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="CalonJamaah" uuid="2d9fccd3-cf87-48b0-b2c5-73b1d64e8b52">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="90" uuid="3650de8d-e4af-49ef-ad35-abad55c2128e">
+						<jr:tableHeader style="table_TH" height="30"/>
+						<jr:detailCell style="table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="9197d92e-4415-426b-bcef-15ae539fe0d7"/>
+								<textFieldExpression><![CDATA[$F{namaJamaah}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="c0632f9e-317d-40ca-baec-588b5b15f5a1">
+						<jr:tableHeader style="table_TH" height="30"/>
+						<jr:detailCell style="table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="3735a7ac-8eb6-4122-a8ea-d5f088c68374"/>
+								<textFieldExpression><![CDATA[$F{noTlp}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="a4de3211-5dbf-4df4-8eab-05f871a93af9">
+						<jr:tableHeader style="table_TH" height="30"/>
+						<jr:detailCell style="table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="79f43eb1-cc59-4352-89ec-003b1c1e9fe4"/>
+								<textFieldExpression><![CDATA[$F{noPaspor}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="2fcba0ee-2c3d-40f2-8339-f2869a950d56">
+						<jr:tableHeader style="table_TH" height="30"/>
+						<jr:detailCell style="table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="18ec2d63-439a-4981-a47a-dfa169f53e5b"/>
+								<textFieldExpression><![CDATA[$F{thnTerakhir}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="05058dd9-504d-4495-b025-16615aaea808">
+						<jr:tableHeader style="table_TH" height="30"/>
+						<jr:detailCell style="table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="76c5dc2a-2e26-4c9c-94b4-b550151de285"/>
+								<textFieldExpression><![CDATA[$F{binti}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="b964884b-13e6-48a9-95d7-82d8d60d0c45">
+						<jr:tableHeader style="table_TH" height="30"/>
+						<jr:detailCell style="table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="75cd3761-a730-431c-b715-34510d92bd33"/>
+								<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="072c4e45-bf75-4592-b339-4f8bdd4ace5e">
+						<jr:tableHeader style="table_TH" height="30"/>
+						<jr:detailCell style="table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="8363156a-5025-4131-ba82-967df95dfd9c"/>
+								<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="341b2aa1-14e6-439a-8a17-2c4ef08c0ac3">
+						<jr:tableHeader style="table_TH" height="30"/>
+						<jr:detailCell style="table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="9ac0161d-30c1-4ebe-9d0a-394ed69e6846"/>
+								<textFieldExpression><![CDATA[$F{pengalamanHaji}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>

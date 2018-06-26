@@ -1,0 +1,80 @@
+<?page title="paket" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="paket" border="normal"
+		apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm') @init('vmd.PaketVmd')">
+		<div align="center">
+			<listbox model="@load(vm.paketVOs)"
+				selectedItem="@bind(vm.paketVO)">
+				<listhead>
+					<listheader label="Harga" sort="auto" />
+					<listheader label="Isi Kamar" sort="auto" />
+					<listheader label="Jenis Paket" sort="auto" />
+					<listheader label="Nama Hotel" sort="auto" />
+					<listheader label="Nama Paket" sort="auto" />
+					<listheader label="Rute" sort="auto" />
+					<listheader label="Dana Bantuan" sort="auto" />
+				</listhead>
+				<template name="model">
+					<listitem>
+						<listcell label="@load(each.harga)" />
+						<listcell label="@load(each.isiKamar)" />
+						<listcell label="@load(each.jenisPaket)" />
+						<listcell label="@load(each.namaHotel)" />
+						<listcell label="@load(each.namaPaket)" />
+						<listcell label="@load(each.rute)" />
+						<listcell label="@load(each.namaBantuan)" />
+					</listitem>
+				</template>
+			</listbox>
+			<space/>
+			<grid>
+				<columns>
+					<column label="Paket" />
+				</columns>
+				<rows>
+					<row>
+						<label value="Harga Paket:" />
+						<textbox value="@bind(vm.paketVO.harga)" />
+
+						<label value="Isi Kamar:" />
+						<textbox value="@bind(vm.paketVO.isiKamar)" />
+					</row>
+					<row>
+						<label value="Jenis Paket:" />
+						<textbox value="@bind(vm.paketVO.jenisPaket)" />
+
+						<label value="Nama Hotel:" />
+						<textbox value="@bind(vm.paketVO.namaHotel)" />
+					</row>
+					<row>
+						<label value="Nama Paket:" />
+						<textbox value="@bind(vm.paketVO.namaPaket)" />
+
+						<label value="Rute:" />
+						<textbox value="@bind(vm.paketVO.rute)" />
+					</row>
+					<row>
+						<label value="Dana Bantuan" />
+						<combobox model="@load(vm.bantuanVOs)"
+							selectedItem="@bind(vm.danaBantuanVO)"
+							onSelect="@command('bantuan')"
+							value="@load(vm.danaBantuanVO.hargaPotongan)">
+							<template name="model">
+								<comboitem label="@load(each.hargaPotongan)" 
+								value="@load(each.id)">
+								</comboitem>
+							</template>
+						</combobox>
+					</row>
+				</rows>
+			</grid>
+			<space/>
+			<div>
+				<button label="simpan" onClick="@command('simpan')" />
+				<button label="hapus" onClick="@command('hapus')" />
+				<button label="ubah" onClick="@command('ubah')" />
+			</div>
+		</div>
+	</window>
+</zk>

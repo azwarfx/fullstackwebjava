@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="tes" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2482b152-b998-409a-b202-09c61e39c0a0">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="508b61d6-8ab8-4258-b69e-3b5c95810636">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="tes"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="namaJamaah" class="java.lang.String">
+			<fieldDescription><![CDATA[namaJamaah]]></fieldDescription>
+		</field>
+		<field name="noTlp" class="java.lang.String">
+			<fieldDescription><![CDATA[noTlp]]></fieldDescription>
+		</field>
+		<field name="noPaspor" class="java.lang.String">
+			<fieldDescription><![CDATA[noPaspor]]></fieldDescription>
+		</field>
+		<field name="thnTerakhir" class="java.util.Date">
+			<fieldDescription><![CDATA[thnTerakhir]]></fieldDescription>
+		</field>
+		<field name="binti" class="java.lang.String">
+			<fieldDescription><![CDATA[binti]]></fieldDescription>
+		</field>
+		<field name="id" class="java.lang.Long">
+			<fieldDescription><![CDATA[id]]></fieldDescription>
+		</field>
+		<field name="class" class="java.lang.Class">
+			<fieldDescription><![CDATA[class]]></fieldDescription>
+		</field>
+		<field name="alamat" class="java.lang.String">
+			<fieldDescription><![CDATA[alamat]]></fieldDescription>
+		</field>
+		<field name="pengalamanHaji" class="java.lang.String">
+			<fieldDescription><![CDATA[pengalamanHaji]]></fieldDescription>
+		</field>
+	</subDataset>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="namaJamaah" class="java.lang.String">
+		<fieldDescription><![CDATA[namaJamaah]]></fieldDescription>
+	</field>
+	<field name="noTlp" class="java.lang.String">
+		<fieldDescription><![CDATA[noTlp]]></fieldDescription>
+	</field>
+	<field name="noPaspor" class="java.lang.String">
+		<fieldDescription><![CDATA[noPaspor]]></fieldDescription>
+	</field>
+	<field name="thnTerakhir" class="java.util.Date">
+		<fieldDescription><![CDATA[thnTerakhir]]></fieldDescription>
+	</field>
+	<field name="binti" class="java.lang.String">
+		<fieldDescription><![CDATA[binti]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.Long">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[alamat]]></fieldDescription>
+	</field>
+	<field name="pengalamanHaji" class="java.lang.String">
+		<fieldDescription><![CDATA[pengalamanHaji]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="237" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table" style="table" x="0" y="11" width="360" height="50" uuid="3d3a7903-5a38-44e2-a192-a41ffb317734"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="130ecfc9-6f6c-4563-b1ef-8c6717783f15">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="90" uuid="1c7a04b5-1609-4087-a726-4ae9a3601f24">
+						<jr:tableHeader style="table_TH" height="30"/>
+						<jr:detailCell style="table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="9ed1ac26-2250-4db8-9570-57cbaf611b54"/>
+								<textFieldExpression><![CDATA[$F{namaJamaah}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="8df8af78-640f-4648-b1f2-64083ec01dad">
+						<jr:tableHeader style="table_TH" height="30"/>
+						<jr:detailCell style="table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="e28a565e-9724-4c4e-85bf-82a3879c9a55"/>
+								<textFieldExpression><![CDATA[$F{noTlp}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="3d3299b5-5fb1-409b-8a76-d95544f2742c">
+						<jr:tableHeader style="table_TH" height="30"/>
+						<jr:detailCell style="table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="9462d0b7-5d72-4639-be4b-002be7bd167e"/>
+								<textFieldExpression><![CDATA[$F{noPaspor}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="8e944b30-0cbe-4925-a0dc-09cf0dca2796">
+						<jr:tableHeader style="table_TH" height="30"/>
+						<jr:detailCell style="table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="9192407f-6030-4e34-8632-f9aa515cca42"/>
+								<textFieldExpression><![CDATA[$F{thnTerakhir}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="a5d43322-11e3-4611-8a5d-cfff945327c8">
+						<jr:tableHeader style="table_TH" height="30"/>
+						<jr:detailCell style="table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="d7d53ec1-ecf5-457b-996a-4f52a2fd71fb"/>
+								<textFieldExpression><![CDATA[$F{binti}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="00c8e344-9160-4ad8-96bb-37bb74891b58">
+						<jr:tableHeader style="table_TH" height="30"/>
+						<jr:detailCell style="table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="8ef61bab-e2e7-4874-ac5d-2698cea588d1"/>
+								<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="2c37ccfd-955c-48d8-9fa6-47c14db4c04f">
+						<jr:tableHeader style="table_TH" height="30"/>
+						<jr:detailCell style="table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="16fc5c82-9182-4f01-8efa-8229795d1413"/>
+								<textFieldExpression><![CDATA[""+$F{class}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="d93c0ad1-be24-4e8d-8b3c-0c6b9ad9e695">
+						<jr:tableHeader style="table_TH" height="30"/>
+						<jr:detailCell style="table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="cd44ea2e-0c72-4186-99a8-3ed182254f66"/>
+								<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="0a128ab0-f7a7-4948-bfb1-367955b5be50">
+						<jr:tableHeader style="table_TH" height="30"/>
+						<jr:detailCell style="table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="632f7dba-04c4-431d-94d9-2b9ae97f071c"/>
+								<textFieldExpression><![CDATA[$F{pengalamanHaji}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</title>
+</jasperReport>

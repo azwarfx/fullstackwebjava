@@ -1,0 +1,75 @@
+<?page title="Data Calon Jamaah" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="Data Calon Jamaah" border="normal"
+		apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm') @init('vmd.CalonJamaahVmd')">
+		<div align="center">
+			<listbox model="@load(vm.voList)"
+				selectedItem="@bind(vm.vo)">
+				<listhead>
+					<listheader label="Nama Jamaah" />
+					<listheader label="Nama Ibu" />
+					<listheader label="Pengalaman Haji" />
+					<listheader label="Tahun Terkahir" />
+					<listheader label="Nomer paspord" />
+					<listheader label="Alamat" />
+					<listheader label="No Tlp" />
+				</listhead>
+				<template name="model">
+					<listitem>
+						<listcell label="@load(each.namaJamaah)" />
+						<listcell label="@load(each.binti)" />
+						<listcell label="@load(each.pengalamanHaji)" />
+						<listcell>
+							<datebox value="@load(each.thnTerakhir)"
+								buttonVisible="false" />
+						</listcell>
+						<listcell label="@load(each.noPaspor)" />
+						<listcell label="@load(each.alamat)" />
+						<listcell label="@load(each.noTlp)" />
+
+					</listitem>
+				</template>
+
+			</listbox>
+			<space />
+			<grid>
+				<columns>
+					<column label="Calon Jamaah :" />
+				</columns>
+				<rows>
+					<row>
+						<label value="Nama Calon Jamaah :" width="10%" />
+						<textbox value="@bind(vm.vo.namaJamaah)" />
+						<label value="Nama Ibu:" />
+						<textbox value="@bind(vm.vo.binti)" />
+					</row>
+					<row>
+						<label value="Pengalaman Haji:" />
+						<textbox value="@bind(vm.vo.pengalamanHaji)" />
+						<label value="Tahun Terakhir:" />
+						<datebox value="@bind(vm.vo.thnTerakhir)" />
+					</row>
+					<row>
+						<label value="Nomer Paspord:" />
+						<textbox value="@bind(vm.vo.noPaspor)" />
+						<label value="Alamat:" />
+						<textbox value="@bind(vm.vo.alamat)" />
+					</row>
+					<row>
+						<label value="No Tlp:" />
+						<textbox value="@bind(vm.vo.noTlp)" />
+					</row>
+				</rows>
+			</grid>
+			<space />
+			<hbox>
+				<button label="Simpan" onClick="@command('simpan')" />
+				<button label="Hapus" onClick="@command('hapus')" />
+				<button label="Edit" onClick="@command('edit')" />
+				<button label="Cetak" onClick="@command('cetak')" />
+			</hbox>
+		</div>
+		<space/>
+	</window>
+</zk>

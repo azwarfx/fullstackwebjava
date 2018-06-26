@@ -1,0 +1,71 @@
+<?page title="Dokumen" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="Dokumen" border="normal"
+		apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm') @init('vmd.DokumenVmd')">
+		<listbox model="@load(vm.dokumenVOs)"
+			selectedItem="@bind(vm.dokumenVO)">
+			<listhead>
+				<listheader label="Nama Jamaah" />
+				<listheader label="KTP" />
+				<listheader label="Paspor" />
+				<listheader label="Kartu Keluarga" />
+
+			</listhead>
+			<template name="model">
+				<listitem>
+					<listcell label="@load(each.namaJamaah)" />
+					<listcell label="@load(each.ktp)" />
+					<listcell label="@load(each.paspor)" />
+					<listcell label="@load(each.kartuKeluarga)" />
+				</listitem>
+			</template>
+		</listbox>
+		<grid>
+			<columns>
+				<column label="Masukan kategory :" />
+			</columns>
+			<rows>
+				<row>
+					<label value="Akte" />
+					<textbox value="@bind(vm.dokumenVO.akte)" />
+					<label value="kartu keluarga" />
+					<textbox value="@bind(vm.dokumenVO.kartuKeluarga)" />
+				</row>
+				<row>
+					<label value="kartu miningitis" />
+					<textbox
+						value="@bind(vm.dokumenVO.kartuManingitis)" />
+					<label value="Keterangan" />
+					<textbox value="@bind(vm.dokumenVO.keterangan)" />
+				</row>
+				<row>
+					<label value="KTP" />
+					<textbox value="@bind(vm.dokumenVO.ktp)" />
+					<label value="Paspor" />
+					<textbox value="@bind(vm.dokumenVO.paspor)" />
+				</row>
+				<row>
+					<label value="Pilih Jamaah" />
+					<combobox model="@load(vm.calonJamaahVOs)"
+						selectedItem="@bind(vm.calonJamaahVO)"
+						onSelect="@command('jamaah')"
+						value="@load(vm.calonJamaahVO.namaJamaah)">
+						<template name="model">
+							<comboitem label="@load(each.namaJamaah)"
+								value="@load(each.id)">
+							</comboitem>
+						</template>
+					</combobox>
+					<label value="Surat Nikah" />
+					<textbox value="@bind(vm.dokumenVO.suratNikah)" />
+				</row>
+				<row>
+					<button label="Simpan" onClick="@command('simpan')" />
+					<button label="Ubah" onClick="@command('ubah')" />
+					<button label="Hapus" onClick="@command('hapus')" />
+				</row>
+			</rows>
+		</grid>
+	</window>
+</zk>

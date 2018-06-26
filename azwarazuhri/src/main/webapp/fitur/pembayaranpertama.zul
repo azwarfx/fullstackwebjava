@@ -1,0 +1,82 @@
+<?page title="Pembayaran Pertama" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="Pembayaran Pertama" border="normal"
+		apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm') @init('vmd.PembayaranPertamaVmd')">
+		<div align="center">
+			<listbox model="@load(vm.pembayaranPertamaVOs)"
+				selectedItem="@bind(vm.pembayaranPertamaVO)">
+				<listhead>
+					<listheader label="Uang Muka" />
+					<listheader label="Calon Jamaah" />
+					<listheader label="Jadwal Keberangkatan" />
+					<listheader label="Paket" />
+				</listhead>
+				<template name="model">
+					<listitem>
+						<listcell label="@load(each.uangDp)" />
+						<listcell
+							label="@load(each.calonJamaah.namaJamaah)" />
+						<listcell>
+						<datebox value="@load(each.tglBerangkat)"
+								buttonVisible="false" />
+						</listcell>
+						<listcell label="@load(each.paket.namaPaket)" />
+					</listitem>
+				</template>
+			</listbox>
+			<grid>
+				<columns>
+					<column label="isi data" />
+				</columns>
+				<rows>
+					<row>
+						<label value="Masukan Uang Pelunasan" />
+						<textbox
+							value="@bind(vm.pembayaranPertamaVO.uangDp)" />
+
+						<label value="Nama Jamaah" />
+						<combobox model="@load(vm.calonJamaahVOs)"
+							selectedItem="@bind(vm.calonJamaahVO)"
+							onSelect="@command('jamaah')"
+							value="@load(vm.calonJamaahVO.namaJamaah)">
+							<template name="model">
+								<comboitem
+									label="@load(each.namaJamaah)" value="@load(each.id)">
+								</comboitem>
+							</template>
+						</combobox>
+					</row>
+					<row>
+						<label value="Jadwal Keberangkatan" />
+						<combobox model="@load(vm.keberangkatanVos)"
+							selectedItem="@bind(vm.keberangkatan)"
+							onSelect="@command('jadwal')"
+							value="@load(vm.keberangkatan.keberangkatan)">
+							<template name="model">
+								<comboitem
+									label="@load(each.keberangkatan)" value="@load(each.id)">
+								</comboitem>
+							</template>
+						</combobox>
+						<label value="Paket" />
+						<combobox model="@load(vm.paketVos)"
+							selectedItem="@bind(vm.paketVo)" onSelect="@command('paket')"
+							value="@load(vm.paketVo.namaPaket)">
+							<template name="model">
+								<comboitem label="@load(each.namaPaket)"
+									value="@load(each.id)">
+								</comboitem>
+							</template>
+						</combobox>
+					</row>
+				</rows>
+			</grid>
+			<div>
+				<button label="Simpan" onClick="@command('simpan')" />
+				<button label="Ubah" onClick="@command('ubah')" />
+				<button label="Hapus" onClick="@command('hapus')" />
+			</div>
+		</div>
+	</window>
+</zk>

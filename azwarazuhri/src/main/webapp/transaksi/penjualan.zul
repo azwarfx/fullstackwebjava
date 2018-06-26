@@ -1,0 +1,43 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="new page title" border="normal"
+		apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm') @init('vmd.PenjualanVmd')">
+
+		<hlayout>
+			<button label="add" onClick="@command('add')" />
+			<button label="edit" onClick="@command('edit')" />
+			<button label="delete" onClick="@command('delete')" />
+
+		</hlayout>
+
+		<div style="text-align:right">
+			<label value="search" />
+			<textbox value="@bind(vm.search)" onOk="@command('search')" />
+		</div>
+		<space />
+
+		<listbox model="@load(vm.listHeader)"
+			selectedItem="@bind(vm.trHeaderPenjualan)">
+			<listhead>
+				<listheader label="NO NOTA" sort="auto" />
+				<listheader label="TTANGGAL" sort="auto" />
+				<listheader label="HARGA BARANG" sort="auto" />
+				<listheader label="Global Diskon" sort="auto" />
+				<listheader label="CUSTOMER" sort="auto" />
+				<listheader label="KARYAWAN" sort="auto" />
+			</listhead>
+			<template name="model">
+			<listitem>
+				<listcell label="@load(each.noNota)" />
+				<listcell label="@load(each.tanggalTransaksi)" />
+				<listcell label="@load(each.hargaTotal)" />
+				<listcell label="@load(each.globalDiskon)" />
+				<listcell label="@load(each.mstCustomer.jenisKelamin)" />
+				<listcell label="@load(each.mstKaryawan.username)" />
+			</listitem>
+			
+			</template>
+		</listbox>
+	</window>
+</zk>

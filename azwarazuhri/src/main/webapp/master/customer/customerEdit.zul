@@ -1,0 +1,87 @@
+<?page title="EditCustomer" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="editCustomer" border="normal"
+		apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm') @init('vmd.CustomerEditVmd')">
+		<hlayout>
+			<button label="back" onClick="@command('back')" />
+			<button label="save" onClick="@command('save')" />
+		</hlayout>
+		<space />
+		<grid>
+			<columns>
+				<column label="" width="250" />
+				<column label="" width="300" />
+			</columns>
+			<rows>
+				<row>
+					<label value="Kode Customer" />
+					<textbox constraint="no empty : harus diisi"
+						value="@load(vm.mstCustomer.customerId) @save(vm.mstCustomer.customerId, before='save')"
+						readonly="@load(vm.mstCustomer.customerId eq null ? false:true)" />
+				</row>
+				<row>
+					<label value="Nama Customer" />
+					<textbox constraint="no empty : harus diisi"
+						value="@bind(vm.mstCustomer.namaCustomer)" />
+				</row>
+				<row>
+					<label value="Alamat Customer" />
+					<textbox constraint="no empty: harus diisi"
+						value="@bind(vm.mstCustomer.alamatCustomer)" />
+				</row>
+				<row>
+					<label value="Jenis Kelamin" />
+					<hlayout>
+						<radiogroup id="rg1"
+							selectedItem="@bind(vm.mstCustomer.jenisKelamin)">
+							<radio value="PRIA" label="Pria" />
+							<radio value="WANITA" label="Wanita" />
+						</radiogroup>
+					</hlayout>
+				</row>
+
+				<row>
+					<label value="Email Customer" />
+					<textbox
+						value="@bind(vm.mstCustomer.emailCustomer)"
+						constraint="/.+@.+.[a-z]+/: format email salah" />
+				</row>
+
+				<row>
+					<label value="Provinsi" />
+					<hlayout>
+						<combobox constraint="no empty : harus diisi"
+							model="@load(vm.listProv)" selectedItem="@save(vm.mstProvinsi)"
+							value="@load(vm.mstProvinsi.namaProvinsi)"
+							onSelect="@command('findkota')">
+							<template name="model">
+								<comboitem
+									label="@load(each.namaProvinsi)"
+									value="@load(each.provinsiId)" />
+							</template>
+
+						</combobox>
+					</hlayout>
+				</row>
+				<row>
+					<label value="Kota" />
+					<combobox constraint="no empty : harus di isi"
+						model="@load(vm.listKota)"
+						selectedItem="@save(vm.mstCustomer.mstKota)"
+						value="@load(vm.mstKota.namaKota)">
+						<template name="model">
+							<comboitem label="@load(each.namaKota)"
+								value="@load(each.kotaId)" />
+
+
+						</template>
+
+					</combobox>
+				</row>
+
+			</rows>
+		</grid>
+
+	</window>
+</zk>

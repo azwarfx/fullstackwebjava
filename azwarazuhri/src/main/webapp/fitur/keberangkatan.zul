@@ -1,0 +1,77 @@
+<?page title="Keberangkatan" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="Jadwal Keberangkatan" border="normal"
+		apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm') @init('vmd.JadwalKeberangkatanVmd')">
+		<div align="center">
+			<listbox model="@load(vm.jadwalKeberangkatanVOs)"
+				selectedItem="@bind(vm.jadwalKeberangkatanVO)">
+				<listhead>
+					<listheader label="KBIH" />
+					<listheader label="Keberangkatan" />
+					<listheader label="Kepulangan" />
+					<listheader label="Nama Kloter" />
+					<listheader label="Pembimbing" />
+				</listhead>
+				<template name="model">
+					<listitem>
+						<listcell label="@load(each.kbih)" />
+						<listcell>
+							<datebox value="@load(each.keberangkatan)"
+								buttonVisible="false"  />
+						</listcell>
+						<listcell>
+							<datebox value="@load(each.kepulangan)"
+								buttonVisible="false"  />
+						</listcell>
+						<listcell>
+							<label value="@load(each.namaKloter)" />
+						</listcell>
+						<listcell>
+							<label value="@load(each.pembimbing)" />
+						</listcell>
+					</listitem>
+				</template>
+			</listbox>
+			<space />
+			<grid>
+				<columns>
+					<column label="tesss"></column>
+				</columns>
+				<rows>
+					<row>
+						<label value="KBIH" />
+						<textbox
+							value="@bind(vm.jadwalKeberangkatanVO.kbih)" />
+
+						<label value="Keberangkatan" />
+						<datebox
+							value="@bind(vm.jadwalKeberangkatanVO.keberangkatan)">
+						</datebox>
+					</row>
+					<row>
+						<label value="Kepulangan" />
+						<datebox format="yyyy/MM/dd"
+							value="@bind(vm.jadwalKeberangkatanVO.kepulangan)">
+						</datebox>
+
+						<label value="Nama Kloter" />
+						<textbox
+							value="@bind(vm.jadwalKeberangkatanVO.namaKloter)" />
+					</row>
+					<row>
+						<label value="Pembimbing" />
+						<textbox
+							value="@bind(vm.jadwalKeberangkatanVO.pembimbing)" />
+					</row>
+				</rows>
+			</grid>
+			<space />
+			<div>
+				<button label="simpan" onClick="@command('simpan')" />
+				<button label="ubah" onClick="@command('ubah')" />
+				<button label="hapus" onClick="@command('hapus')" />
+			</div>
+		</div>
+	</window>
+</zk>

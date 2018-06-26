@@ -1,0 +1,46 @@
+<?page title="Dana BAntuan" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="Dana BAntuan" border="normal"
+		apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm') @init('vmd.DanaBantuanVmd')">
+		<div align="center">
+			<listbox model="@load(vm.bantuanVOs)"
+				selectedItem="@bind(vm.danaBantuanVO)">
+				<listhead>
+					<listheader label="harga potongan" />
+					<listheader label="nominal" />
+				</listhead>
+				<template name="model">
+					<listitem>
+						<listcell label="@load(each.hargaPotongan)" />
+						<listcell label="@load(each.nominal)" />
+					</listitem>
+				</template>
+			</listbox>
+			<space />
+			<grid>
+				<columns>
+					<column value="masuka data" />
+				</columns>
+				<rows>
+					<row>
+						<label value="Nama Potongan Harga" />
+						<textbox
+							value="@bind(vm.danaBantuanVO.hargaPotongan)" />
+					</row>
+					<row>
+						<label value="Nominal" />
+						<textbox
+							value="@bind(vm.danaBantuanVO.nominal)" />
+					</row>
+				</rows>
+			</grid>
+			<space />
+			<div>
+				<button label="simpan" onClick="@command('simpan')" />
+				<button label="hapus" onClick="@command('hapus')" />
+				<button label="ubah" onClick="@command('ubah')" />
+			</div>
+		</div>
+	</window>
+</zk>

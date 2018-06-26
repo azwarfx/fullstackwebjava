@@ -1,0 +1,68 @@
+<?page title="pembayaran kedua" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="pembayaran kedua" border="normal"
+		apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm') @init('vmd.PembayaranKeduaVmd')">
+		<div align="center">
+			<listbox model="@load(vm.vos)"
+				selectedItem="@bind(vm.vo)">
+				<listhead>
+					<listheader label="Pelunasan" sort="auto" />
+					<listheader label="Tgl Pelunsan" sort="auto" />
+					<listheader label="Batas Pelunasan" sort="auto" />
+					<listheader label="Pembayan Pertama" sort="auto" />
+				</listhead>
+				<template name="model">
+					<listitem>
+						<listcell label="@load(each.pelunasan)" />
+						<listcell>
+							<datebox value="@load(each.tglPelunasan)"
+								buttonVisible="false" />
+						</listcell>
+						<listcell>
+							<datebox
+								value="@load(each.tglBatasPelunasan)" buttonVisible="false" />
+						</listcell>
+						<listcell
+							label="@load(each.pembayaranPertama.uangDp)" />
+					</listitem>
+				</template>
+			</listbox>
+			<space />
+			<grid>
+				<columns>
+					<column label="isi data" />
+				</columns>
+				<rows>
+					<row>
+						<label value="Masukan Pelunasan" />
+						<textbox value="@bind(vm.vo.pelunasan)" />
+
+						<label value="Tgl pelunasan" />
+						<datebox value="@bind(vm.vo.tglPelunasan)" />
+					</row>
+					<row>
+						<label value="Batas Pelunasan" />
+						<datebox value="@bind(vm.vo.tglBatasPelunasan)" />
+
+						<label value="pembayaran Pertama" />
+						<combobox model="@load(vm.pertmaVOS)"
+							selectedItem="@bind(vm.pertmaVO)" onSelect="@command('dp')"
+							value="@load(vm.pertmaVO.uangDp)">
+							<template name="model">
+								<comboitem label="@load(each.uangDp)"
+									value="@load(each.id)" />
+							</template>
+						</combobox>
+					</row>
+				</rows>
+			</grid>
+			<space />
+			<div>
+				<button label="Simpan" onClick="@command('simpan')" />
+				<button label="Ubah" onClick="@command('ubah')" />
+				<button label="Hapus" onClick="@command('hapus')" />
+			</div>
+		</div>
+	</window>
+</zk>
